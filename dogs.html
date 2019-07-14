@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dog Quiz App</title>
     <link rel="stylesheet" href="dogs.css" type="text/css" />
@@ -13,75 +13,95 @@
 <body>
     <main>
         <!--Intro Screen-->
-        <header>
-            <h1>DOG QUIZ</h1>
-            <h2>Question Number</h2>
-            <h2>Your Score</h2>
+        <nav>
             <img src="images/logo.png" class='logo' alt="paw logo">
-        </header>
+            <header>
+                <h1>DOG QUIZ</h1>
+                <h2>Question Number: </h2>
+                <h2>Your Score: </h2>
+            </header>
+            <img src="images/logo.png" class='logo' alt="paw logo">
+        </nav>
         <section id=introBlurb>
-            <p>Intro Blurb about the Quiz</p>
+            <img src="images/pibble.png" class="pibble" alt="Pitbull with cocked ear">
+            <p>You love dogs? Of course you love dogs, <br>
+                I mean, what are you? A serial killer? <br>
+                Anyway, back to the puppies, you love 'em, <br>
+                you have 'em, or you want 'em. <br>
+                So why don't you go ahead and take this little quiz <br>
+                about our furry friends so you can learn even more about them!
+            </p>
+            <button id="startButton">Let's Go!</button>
         </section>
-        <img src="images/6.png" alt="Pitbull with cocked ear">
-        <button>Let's Go!</button>
-
         <!--Questions-->
-        <header>
-            <h1>DOG QUIZ</h1>
-            <h2>Question Number</h2>
-            <h2>Your Score</h2>
+        <nav>
             <img src="images/logo.png" class='logo' alt="paw logo">
-        </header>
-        <form>
-            <fieldset>
-                <legend>Question Text</legend>
-                <ol>
-                    <li>
-                        <label for="answer1">
-                            <input type="radio" value="0" name="answer" id="answer1">Answer</input>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="answer2">
-                            <input type="radio" value="0" name="answer" id="answer2">Answer</input>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="answer3">
-                            <input type="radio" value="0" name="answer" id="answer3">Answer</input>
-                        </label>
-                    </li>
-                    <li>
-                        <label for="answer4">
-                            <input type="radio" value="0" name="answer" id="answer4">Answer</input>
-                        </label>
-                    </li>
-                </ol>
-            </fieldset>
-        </form>
-        <Button>Treats Please</Button>
-        <!--Answer/Feedback-->
-        <header>
-            <h1>DOG QUIZ</h1>
-            <h2>Question Number</h2>
-            <h2>Your Score</h2>
+            <header>
+                <h1>DOG QUIZ</h1>
+                <h2>Question Number:</h2>
+                <h2>Your Score:</h2>
+            </header>
             <img src="images/logo.png" class='logo' alt="paw logo">
-        </header>
-        <img src="dog image">
-        <section class="results">
-            <p>You got it xxx!</p>
+        </nav>
+        <section class="mainQuiz" role="Main Question Element">
+            <img src="images/dognose.png" class="questionPicLeft" alt="picture of cute dog">
+            <form>
+                <fieldset>
+                    <legend>Woof, next question...</legend>
+                    <ol>
+                        <li>
+                            <label for="answer1">
+                                <input type="radio" value="0" name="answer" id="answer1">Answer</input>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="answer2">
+                                <input type="radio" value="0" name="answer" id="answer2">Answer</input>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="answer3">
+                                <input type="radio" value="0" name="answer" id="answer3">Answer</input>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="answer4">
+                                <input type="radio" value="0" name="answer" id="answer4">Answer</input>
+                            </label>
+                        </li>
+                    </ol>
+                </fieldset>
+            </form>
+            <Button id="fetchAnswer">Fetch Answer!</Button>
         </section>
-        <section class=infoBlurb role="information">
+        <!--Answer/Feedback-->
+        <nav>
+            <img src="images/logo.png" class='logo' alt="paw logo">
+            <header>
+                <h1>DOG QUIZ</h1>
+                <h2>Question Number:</h2>
+                <h2>Your Score:</h2>
+            </header>
+            <img src="images/logo.png" class='logo' alt="paw logo">
+        </nav>
+        <section class="results">
+        <img src="images/fence.png" class="dogFence" alt="Dog looking through fence">
+            <p>You got it wrong/right!</p>
+        <section class="infoAnswer" role="information">
             <p>Detailed Answer</p>
         </section>
+        <button id="nextQ">Another Treat?</button>
         <section class="charity" role="link to charities">
-            <a href="link"></a>
+                <p>If you're interested in helping out, you should check out <a href="link">this</a> charity to learn more!</p>
+            </section>
         </section>
-        <button>Next Question</button>
+    
         <!--Final Screen-->
-        <img src="images/rosette.png">
         <section class="final-score">
+        <section class="closingComment">
+        <img src="images/rosette.png" class="rosette">
             <p>Good job, you got xxx</p>
+            <p>Save all the dogs! Info about 600/400 million</p>
             <button>Take Quiz Again</button>
         </section>
         <section class="links-list" role="list of links from quiz">
@@ -95,11 +115,12 @@
                 <li>link</li>
             </ul>
         </section>
-        <section class="dog-rescue" role="dog rescue info">
-            <p>Save all the dogs!</p>
         </section>
     </main>
-    <footer>Copyright KiloWatt Koding//contact</footer>
+    <footer>Copyright KiloWatt Koding <br>
+            morvenwatt@gmail.com
+    </footer>
 </body>
 <!--<jq/js links!></jq>-->
+
 </html>
