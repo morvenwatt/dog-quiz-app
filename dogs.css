@@ -6,6 +6,11 @@ body {
     font-family: Raleway;
     color: black;
 }
+/* DELETE AT END!!*/
+.GB {
+    font-size: 30px;
+    border: black 2px solid;
+}
 nav {
     display: flex;
     justify-content: space-between;
