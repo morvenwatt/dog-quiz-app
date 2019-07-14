@@ -276,7 +276,7 @@ function generateQuestion(question){
    return `
     <form>
         <fieldset>
-            <legend>${question.text}</legend>
+            <legend>${questions.text}</legend>
             <ol>
                 <li>
                     <label for="answer1">
@@ -303,10 +303,24 @@ function generateQuestion(question){
     </form>`
 }
 
-function generateFeedbackPage (question)
+function generateFeedbackPage (question) {}
 
-//What will need JS elements?
-//Score/Question location.
-//Question being displayed.
-//Answer being displayed; inc blurb, and charity (list of charities)
-//Score on final page. 
+function AnswerImage (){}
+// this will need questions.image
+function getAnswer (){}
+// questions.blurb
+function AnswerCharity (){}
+// questions.charity
+
+function startButton (){}
+function AnswerButton (){}
+function nextQuestionButton (){}
+function takeQuizAgainButton (){}
+
+function QuestionImage (){}
+// same image as answerImage
+
+
+function getFinalScore (){}
+// will take the getScore function 
+
