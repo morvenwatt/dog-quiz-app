@@ -2,7 +2,8 @@ const QUIZ = {
     questions: [{
         text: "Which dog breed doesn't bark?",
         blurb: "The only breed not to bark is the Basenji...but they can scream, yodel and whine!",
-        charity: 
+        charity: "https://www.basenjirescue.org/DOGS/default.asp",
+        image: "images/dognose.png",
         answers: [
             {
                 text: "Basenji",
@@ -24,6 +25,8 @@ const QUIZ = {
     {
         text: "What is the worlds oldest dog breed?",
         blurb: "It is the Saluki. These good boys appear as early as 2100BC in ancient Egyptian Tombs. ",
+        charity: "http://www.stola.org/",
+        image: "images/whitePup.png",
         answers: [
             {
                 text: "Egyptian Pharoah dog",
@@ -46,6 +49,8 @@ const QUIZ = {
     {
         text: "What is the most popular American dog breed?",
         blurb: "It is the labrador, and it has been for the past 26 years.",
+        charity:"https://dlrrphoenix.org/",
+        image: "images/husky.png",
         answers: [
             {
                 text: "Staffordshire Terrier",
@@ -66,6 +71,8 @@ const QUIZ = {
         },
         {text: "Around how many words/gestures can a dog understand?",
         blurb: "Around 160, on average, giving them roughly the same mental faculties as a two year old. The most ever learnt was 1022 words/gestures by a border collie! ",
+        charity: "http://www.glenhighlandfarm.com/sbcr.htm",
+        image: "images/colliePup.png",
         answers: [
             {
                 text: "250",
@@ -87,6 +94,8 @@ const QUIZ = {
     }, {
     text: "Where do spiked collars come from?",
     blurb: "Ancient Greece - they were thought to have been designed to protect the dogs from wolf attacks.",
+    charity:"https://saveagreekstray.org/el/",
+    image: "images/goldenPups.png"
     answers: [
         {
             text: "Poland",
@@ -109,7 +118,9 @@ const QUIZ = {
 {
     text: "Which dog breed has webbed feet?",
     blurb: "The newfoundland dog was originally bred to help haul nets for fishermen and rescuing people at risk of drowning.",
-        answers: [
+    charity:"http://bigdogshugepaws.com/dogs/newfoundland",
+    image:"images/paddledogs.png",
+    answers: [
         {
             text: "Chesapeake bay retriever",
             isCorrect: false
@@ -131,6 +142,8 @@ const QUIZ = {
 {
     text: "Which dog has such an incredible sense of smell, it can be used as evidence in a court of law?",
     blurb: "Bloodhounds can also follow tracks that are over 300 hours old and can stay on a trail for over 130 miles!",
+    charity: "http://www.southeastbloodhoundrescue.net/",
+    image: "images/frenchie.png",
     answers: [
         {
             text: "Bloodhound",
@@ -153,6 +166,8 @@ const QUIZ = {
 {
     text: "How tall is the tallest dog?",
     blurb: "44 inches...It's a great Dane named Zeus, and that equates to about 3’6.",
+    charity: "https://www.greatdanerescueinc.com/",
+    image: "images/fence.png",
     answers: [
         {
             text: "56 inches",
@@ -175,6 +190,8 @@ const QUIZ = {
 {
     text: "Which dog breed is known for being the best hunter?",
     blurb: "Not just dog, but of all time! The African Hunting Dog is the most successful land hunter in the world. They’re successful in 50-70% of their hunts, which makes them consistently the best mammalian hunter, they even hold the current world record for it!",
+    charity: "https://kspca-kenya.org/",
+    image: "images/pibble.png",
     answers: [
         {
             text: "Cane Corso",
@@ -197,6 +214,8 @@ const QUIZ = {
 {
     text: "Which breed is the most decorated dog of the US military?",
     blurb: "Lots of dogs have done amazing stuff during wars (and many of them are mixbreeds) but Sargeant Stubby, a likely pit bull predecessor, served alongside human soldiers in the trenches in France during World War I. He received the purple heart, was promoted to sergeant, and lived to a ripe old age in retirement alongside his handler.",
+    charity: "http://www.fight4them.org/",
+    images: "images/adultGolden.png",
     answers: [
         {
             text: "German Shepherd",
@@ -218,7 +237,9 @@ const QUIZ = {
 },
 {
     text: "How many dogs are there in the world?",
-    blurb: "Of those 600 million, 400 Million are estimated to be strays….ADOPT DON’T SHOP! ",
+    blurb: "Of those 900 million, 200 Million are estimated to be strays, so the message adopt don't shop is pretty sage! ",
+    charity: "https://www.mnn.com/family/pets/stories/25-creative-ways-to-help-animal-shelters",
+    image: "images/smilingDog",
     answers: [
         {
             text: "1 Billion",
@@ -229,11 +250,11 @@ const QUIZ = {
             isCorrect: false
         },
         {
-            text: "600 Million",
+            text: "900 Million",
             isCorrect: true
         },
         {
-            text: "800 Million",
+            text: "600 Million",
             isCorrect: false
         },
     ]

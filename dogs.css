@@ -6,7 +6,7 @@ body {
     font-family: Raleway;
     color: black;
 }
-/* DELETE AT END!!*/
+/* DELETE GB AT END!!*/
 .GB {
     font-size: 30px;
     border: black 2px solid;
@@ -19,26 +19,15 @@ nav {
     height: 150px;
     margin-bottom: 25px;
 }
-nav header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
 h1 {
     margin-bottom: 5px;
     margin-top: 10px;
 }
 h2 {
-    margin-top: 2px;
+
     margin-bottom: 2px;
 }
 .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     width: 80px;
     height: 80px;
     margin-right: 15px;
@@ -63,22 +52,23 @@ h1 {
 }
 /*Intro Screen*/
 #introBlurb {
-    border: 2px solid maroon;
     box-shadow: 6px, 6px, 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.pibble {
+.pibbleInHat {
     float: right;  
     border-radius: 50%; 
-    width: 200px 
-    margin: 35px, 35px;
+    width: 200px; 
+    margin-top: 10px;
+
 }
 #startButton {
     display: inline-block;
     margin: auto;
+    margin-bottom: 10px;
     
 }
 /*Questions*/
@@ -90,7 +80,7 @@ h1 {
  justify-content: space-between;
 }
 legend{
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
 }
@@ -116,12 +106,18 @@ fieldset ol {
     padding-left: 0px;
 
 }
-.questionPicLeft {
+.questionPic {
      border-radius: 50%;
      display: flex;
-     width: 200px;
-     height: 200px;
+     width: 100px;
+     height: 100px;
+     margin-bottom: 15px;
      
+}
+.question {
+    text-align: center;
+    font-size; 60px;
+    letter-spacing: 2px;
 }
 
 
@@ -131,42 +127,52 @@ fieldset ol {
     flex-direction: column;
     align-items: center;
 }
-.dogFence {
+.answerPic {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 #nextQ {
-
+ margin-bottom: 20px;
 }
 .charity {
-    border: 2px solid white;
+    border: 2px solid black;
+    box-shadow: 6px, 6px, 0px;
     text-align: center;
     font-size; 25px;
 }
 .charity p {
-    margin: 5px;
+    margin: 10px;
 }
 a:link {
     color: white;
 }
 /*Final Screen*/
-.finalScore {
-    display: flex;
-    flex-direction: row;
-}
-.closingComment {
+.final-score {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.links-list {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
+#finalResult {
+    font-size: 25px;
+    text-shadow: 0px, 5px, 8px, #555;
+}
+
+.charityList {
+    list-style: none;
+    color: white;
+    padding-inline-start: 0px;
+}
+a:hover {
+    font-size: 20px;
+}
+a:visited {
+    color: black;
 }
 .rosette {
-    width: 100px;
+    width: 90px;
     height: 100px;
 }
 /*footer*/
