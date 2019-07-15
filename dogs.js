@@ -122,12 +122,12 @@ const QUIZ = {
         },
         {
             text: "Which dog breed has webbed feet?",
-            blurb: "The newfoundland dog was originally bred to help haul nets for fishermen and rescuing people at risk of drowning.",
+            blurb: "The newfoundland dog was originally bred to help haul nets for fishermen and rescue people at risk of drowning.",
             charity: "http://bigdogshugepaws.com/dogs/newfoundland",
-            image: "images/paddledogs.png",
+            image: "images/paddedogs.png",
             answers: [
                 {
-                    text: "Chesapeake bay retriever",
+                    text: "Labrador",
                     isCorrect: false
                 },
                 {
@@ -135,7 +135,7 @@ const QUIZ = {
                     isCorrect: true
                 },
                 {
-                    text: "German Shorthaired Pointer",
+                    text: "GSP",
                     isCorrect: false
                 },
                 {
@@ -242,9 +242,9 @@ const QUIZ = {
         },
         {
             text: "How many dogs are there in the world?",
-            blurb: "Of those 900 million, 200 Million are estimated to be strays, so the message adopt don't shop is pretty sage! ",
+            blurb: "It's a whopping 900 million, 200 million of which are estimated to be strays, so the message adopt don't shop is pretty sage! ",
             charity: "https://www.mnn.com/family/pets/stories/25-creative-ways-to-help-animal-shelters",
-            image: "images/smilingDog",
+            image: "images/smilingDog.png",
             answers: [
                 {
                     text: "1 Billion",
@@ -279,35 +279,41 @@ function getCurrentQuestion() {
     return QUIZ.questions[getCurrentQuestionNumber()];
 }
 function getScore() {
-    return QUIZ.questions.filter(question => question.isCorrect).length;
+    return QUIZ.answers.filter(answer => answer.isCorrect).length;
 }
 
 
 function generateHeader (){
    return `
-   <p>Question Number:${getCurrentQuestionNumber()}</p >
-   <p>Your Score:${getScore()}</p>
+   <header role="Quiz title and score/location log">
+   <img src="images/logo.png" class='logo' alt="paw logo">
+   <h1>Pup-Quiz!</h1>
+   <p>Question Number : ${getCurrentQuestionNumber()+1}</p >
+   <p>Your Score : ${getScore()}</p>
+   </header>
    `
 }
 function generateIntro (){
       return `
+        <section class="introPage" role="Introduction to Quiz">
       <img src="images/pibbleInHat.png" class="pibbleInHat" alt="Pitbull with hat on">
-      <p>You love dogs? Of course you love dogs, <br>
-          I mean, what are you? A serial killer? Just kidding.<br>
-          Anyway, back to the puppies, you love 'em, <br>
-          you have 'em, you pet 'em, or you want 'em. <br>
-          So why don't you go ahead and take this little quiz <br>
+      <p class="introParagraph">You love dogs? Of course you love dogs. I mean, what are you? A serial killer?
+        Just kidding, I'm sure you're great Ted! Anyway, back to the puppies, you love 'em, 
+          you have 'em, you pet 'em, or you want 'em. 
+          So why don't you go ahead and take this little quiz 
           about our furry friends so you can learn more about them!
       </p>
       <button id="startButton">Let's Go!</button> 
+      </section>
       `
 }
 function generateQuestion(question) {
     return `
+    <section class="questionPage" role="Question and Answer Options">
     <img src="${question.image}" class="questionPic" alt="picture of cute dog">
     <form>
         <fieldset>
-            <legend>${questions.text}</legend>
+            <legend>${question.text}</legend>
             <ol>
           ${question.answers.map((answer, index)=>{
               return `
@@ -319,50 +325,55 @@ function generateQuestion(question) {
           }).join("\n")}
      </ol>
         </fieldset>
-    </form>`
+    <input type="submit" value="Fetch Answer"></input>
+    </form>
+    </section>`
 }
 
 function generateFeedbackPage(question, answer){
     return `
+    <section class="answerPage" role="Result, charity link and answer">
     <img src="${question.image}" class="answerPic" alt="cute dog">
-    <section class="infoAnswer" role="information">
-            <p>You got it ${answer.isCorrect?"right":"wrong"}</p>
-            <p>${question.blurb}</p>
-    </section>
+        <div id="answer"
+            <p class="result">You got it ${answer.isCorrect?"right":"wrong"}! </p>
+            <p> Go give a dog some belly rubs!</p>
+            <p class="info">${question.blurb}</p>
+            </div>
     <button id="nextQ">Another Treat?</button>
     <div class="charity" role="link to charities">
             <p>Like these dogs? Check out <a href="${question.charity}">this</a> charity to learn more!</p>
         </div>
+        </section>
     `
 }
 
 function generateFinalPage (){
     return `
+    <section class="finalPage">
     <img src="images/rosette.png" class="rosette">
             <p id="finalResult">Good job, you got ${getScore()}/${QUIZ.questions.length}</p>
-            <p>Thanks for taking this quiz! <br>
-               There are a lot of dogs and strays out there. <br>
-                But, there is so much we can do. <br>
-               You don't have to adopt a dog (or cat), you can <br>
-               transport, donate time, money, items, or skills. <br>
-               <a href="https://www.dosomething.org/us/facts/11-facts-about-animal-homelessness">200 Million</a> strays is a lot, <br>
+            <p class="closingParagraph">Thanks for taking this quiz! There are a lot of dogs out there. 
+            But, there is a lot we can do to help. You don't have to adopt a dog (or cat), you can 
+               transport them, or, donate your time, money, items, and skills. 
+               <a href="https://www.dosomething.org/us/facts/11-facts-about-animal-homelessness"target="_blank"">200 Million</a> strays is a lot, 
                and our furry friends can always use a helping hand!
             </p>
             <button id="restartQuiz">Another Round?</button>
             <h3>Want to check out any of those links?</h3>
             <ol class="charityList">
-                <li><a href="https://www.basenjirescue.org/DOGS/default.asp">Basenji Rescue</a></li>
-                <li><a href="http://www.stola.org/">Saluki Rescue</a></li>
-                <li><a href="https://dlrrphoenix.org/">Phoenix Lab Rescue</a></li>
-                <li><a href="http://www.glenhighlandfarm.com/sbcr.htm">Collie Rescue</a></li>
-                <li><a href="https://saveagreekstray.org/el/">Greek Stray Rescue</a></li>
-                <li><a href="http://bigdogshugepaws.com/dogs/newfoundland">Newfie Rescue</a></li>
-                <li><a href="http://www.southeastbloodhoundrescue.net/">Bloodhound Rescue</a></li>
-                <li><a href="https://www.greatdanerescueinc.com/">Great Dane Rescue</a></li>
-                <li><a href="https://kspca-kenya.org/">Kenyan SPCA</a></li>
-                <li><a href="http://www.fight4them.org/">Fight4Them (Dog Fighting Prevention & Rescue)</a></li>
-                <li><a href="https://www.mnn.com/family/pets/stories/25-creative-ways-to-help-animal-shelters">Other ways to help!</a></li>
+                <li><a href="https://www.basenjirescue.org/DOGS/default.asp" target="_blank">Basenji Rescue</a></li>
+                <li><a href="http://www.stola.org/"arget="_blank">Saluki Rescue</a></li>
+                <li><a href="https://dlrrphoenix.org/"arget="_blank">Phoenix Lab Rescue</a></li>
+                <li><a href="http://www.glenhighlandfarm.com/sbcr.htm"arget="_blank">Collie Rescue</a></li>
+                <li><a href="https://saveagreekstray.org/el/"arget="_blank">Greek Stray Rescue</a></li>
+                <li><a href="http://bigdogshugepaws.com/dogs/newfoundland"arget="_blank">Newfie Rescue</a></li>
+                <li><a href="http://www.southeastbloodhoundrescue.net/"arget="_blank">Bloodhound Rescue</a></li>
+                <li><a href="https://www.greatdanerescueinc.com/"arget="_blank">Great Dane Rescue</a></li>
+                <li><a href="https://kspca-kenya.org/"arget="_blank">Kenyan SPCA</a></li>
+                <li><a href="http://www.fight4them.org/"arget="_blank">Fight4Them (Dog Fighting Prevention & Rescue)</a></li>
+                <li><a href="https://www.mnn.com/family/pets/stories/25-creative-ways-to-help-animal-shelters"arget="_blank">Other ways to help!</a></li>
             </ol>
+            </section>
     `
 }
 function displayIntro(){
@@ -373,16 +384,51 @@ function displayQuestion (question = getCurrentQuestion()){
     $("header").html(generateHeader());
     $("main").html(generateQuestion(question));
 }
+function displayFeedback (question, answer){
+    $("header").html(generateHeader());
+    $("main").html(generateFeedbackPage(question, answer));
+}
+function displayFinalPage (){
+    $("header").html(generateHeader());
+    $("main").html(generateFinalPage());
+}
 
 function handleStartButton() {
-        $('main').on('click', '.startButton', function (event) {
+        $('main').on('click', '#startButton', function (event) {
         displayQuestion();
     })
 }
-
+function handleAnswerSubmit (){
+    $('main').on('submit', 'form', function (event){
+        event.preventDefault();
+        const selectedValue = $('input[type="radio"]:checked').val();
+        const question = getCurrentQuestion();
+        const answer = question.answers[selectedValue];
+        QUIZ.answers.push(answer);
+        displayFeedback(question, answer);
+    })
+}
+function handleNextQuestion (){
+    $('main').on('click', '#nextQ', function (event){ 
+        const isOnLastQuestion = getCurrentQuestionNumber() >= QUIZ.questions.length;
+        if (isOnLastQuestion) {
+            displayFinalPage();
+        }
+        else displayQuestion();
+    })
+}
+function handleRestartQuiz (){
+    $('main').on('click', '#restartQuiz', function (event){
+        resetQuiz();
+        displayIntro();
+    })
+}
 
 function setUpEventHanders(){
     handleStartButton();
+    handleAnswerSubmit();
+    handleNextQuestion();
+    handleRestartQuiz();
 }
 
 function initializeUI(){

@@ -6,28 +6,25 @@ body {
     font-family: Raleway;
     color: black;
 }
-/* what do I do if I want to specify in reverse? */
-/* @mediaquery screen and (min-width 500px) { */
-nav {
+/* CSS styling for the main body of everything ^^ */
+/* CSS styling for header, buttons (on numerous pages) and for the intro page */
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-bottom: 25px;
     height: 200px;
 }
-nav h1 {
+header h1 {
     margin: 0px;
 }
-
-.logo {
+header .logo {
     width: 80px;
     height: 80px;
     margin: auto;
-    margin-top: 35px;
 }
 
-button {
+button, input[type="submit"] {
     width: 200px;
     height: 80px;
     font-size: 30px;
@@ -36,54 +33,57 @@ button {
     color: black;
     text-align: center;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 15px;
 }
-button:hover {
+button:hover, input[type="submit"]:hover {
     color: white;
 }
 h1 {
     font-size: 50px;
     letter-spacing: 2px;
 }
-/*Intro Screen*/
-#introBlurb {
-    box-shadow: 6px, 6px, 0px;
+.introPage {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
+}
+.introParagraph {
+    width: 300px;
+}
+p {
+    margin: 1px;
 }
 .pibbleInHat {
-    float: right;  
     border-radius: 50%; 
     width: 200px; 
     margin-top: 10px;
+    margin-bottom: 15px;
 
 }
-#startButton {
-    display: inline-block;
-    margin: auto;
-    margin-bottom: 10px;
-    
-}
+
 /*Questions*/
-.mainQuiz {
- border: 2px solid inset maroon;
+.questionPage, form {
  display: flex;
  flex-direction: column;
+ justify-content: center;
  align-items: center;
  justify-content: space-between;
 }
 legend{
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 2px;
     text-align: center;
 }
 fieldset {
     border: none;
+    width: 350px;
 }
 fieldset li {
-    box-shadow: 6px 6px 0px;
-    list-style: none;
+    box-shadow: 6px 6px 0px maroon;
+    list-style-type: none;
+    font-size: 30px;
     height: 50px;
     width: 350px;
     margin-bottom: 8px;
@@ -91,14 +91,6 @@ fieldset li {
 fieldset li label {
     margin-left: 10px;
     margin-top: 15px;
-}
-fieldset ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0px;
-
 }
 .questionPic {
      border-radius: 50%;
@@ -109,9 +101,8 @@ fieldset ol {
      
 }
 
-
 /*Answer/Feedback*/
-.results {
+.answerPage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,24 +111,34 @@ fieldset ol {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#answer {
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
 }
 #nextQ {
  margin-bottom: 20px;
 }
 .charity {
     border: 2px solid black;
-    box-shadow: 6px, 6px, 0px;
+    box-shadow: 6px 6px 0px;
     text-align: center;
-    font-size; 25px;
+    font-size: 20px;
 }
 .charity p {
     margin: 10px;
-}
-a:link {
     color: white;
 }
+a:link {
+    color: black;
+}
+
 /*Final Screen*/
-.final-score {
+.finalPage{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,9 +147,15 @@ a:link {
 }
 #finalResult {
     font-size: 25px;
-    text-shadow: 0px, 5px, 8px, #555;
+    text-shadow: 0px 5px 8px #555;
 }
-
+.closingParagraph{
+    width: 300px;
+}
+h3 {
+    color: white;
+    font-size: 20px;
+}
 .charityList {
     list-style: none;
     color: white;
@@ -166,6 +173,81 @@ a:visited {
 }
 /*footer*/
 footer {
-    color: white;
+    color: black;
     text-align: center;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 500px){
+    p {
+        font-size: 30px;
+    }
+    fieldset {
+        width: 400px;
+    } 
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+        text-align: center;
+        height: 120px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    header h1 {
+        margin: 0px;
+    }
+    header .logo {
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+    }
+    .introParagraph {
+        width: 400px;
+    }
+    .closingParagraph{
+        width: 400px;
+    }
+    #answer {
+        width: 400px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #finalResult {
+        font-size: 35px;
+    }
+    a:hover {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 809px){
+    fieldset {
+        width: 700px;
+    } 
+    header .logo {
+        width: 80px;
+        height: 80px;
+        margin: 0px;
+    }
+    .introParagraph {
+        width: 700px;
+    }
+    .closingParagraph{
+        width: 700px;
+    }
+    #answer {
+        width: 700px;
+        font-size: 50px;
+        text-align: center;
+    }
+    legend{
+        font-size: 35px;
+        letter-spacing: 2px;
+        
+    }
 }
