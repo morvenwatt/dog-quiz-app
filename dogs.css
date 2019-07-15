@@ -190,9 +190,10 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        justify-content: center;
         text-align: center;
         height: 120px;
-        width: 85%;
+        width: 90%;    
         margin-top: 15px;
     }
     header h1 {
