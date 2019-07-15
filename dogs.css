@@ -14,6 +14,7 @@ header {
     justify-content: center;
     text-align: center;
     height: 200px;
+    margin-top: 15px;
 }
 header h1 {
     margin: 0px;
@@ -192,7 +193,7 @@ footer {
         justify-content: space-between;
         text-align: center;
         height: 120px;
-        width: 100%;
+        width: 85%;
         margin-top: 15px;
     }
     header h1 {
