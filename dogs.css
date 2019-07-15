@@ -179,9 +179,9 @@ footer {
     margin-top: 15px;
 }
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 550px){
     p {
-        font-size: 30px;
+        font-size: 25px;
     }
     fieldset {
         width: 400px;
@@ -189,7 +189,6 @@ footer {
     header {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         justify-content: space-between;
         text-align: center;
         height: 120px;
