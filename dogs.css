@@ -179,7 +179,7 @@ footer {
     margin-top: 15px;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 610px){
     p {
         font-size: 25px;
     }
@@ -191,7 +191,6 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         justify-content: center;
-        align-items: center;
         text-align: center;
         height: 120px;
         width: 90%;    
@@ -227,7 +226,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 809px){
+@media screen and (min-width: 850px){
     fieldset {
         width: 700px;
     } 
