@@ -183,9 +183,6 @@ footer {
     p {
         font-size: 25px;
     }
-    fieldset {
-        width: 400px;
-    } 
     header .logo {
         width: 100px;
         height: 100px;
@@ -214,9 +211,7 @@ footer {
 }
 
 @media screen and (min-width: 850px){
-    fieldset {
-        width: 700px;
-    } 
+
     .introParagraph {
         width: 700px;
     }
