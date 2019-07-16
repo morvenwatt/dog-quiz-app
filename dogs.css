@@ -65,6 +65,7 @@ p {
 }
 
 /*Questions*/
+
 .questionPage, form {
  display: flex;
  flex-direction: column;
@@ -72,6 +73,7 @@ p {
  align-items: center;
  justify-content: space-between;
 }
+
 legend{
     font-size: 25px;
     letter-spacing: 2px;
@@ -80,6 +82,7 @@ legend{
 fieldset {
     border: none;
     width: 350px;
+    margin: auto;
 }
 fieldset li {
     box-shadow: 6px 6px 0px maroon;
@@ -99,6 +102,7 @@ fieldset li label {
      width: 100px;
      height: 100px;
      margin-bottom: 15px;
+     margin: auto;
      
 }
 
