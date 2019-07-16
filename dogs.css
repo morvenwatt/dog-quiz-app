@@ -57,11 +57,13 @@ p {
     margin: 1px;
 }
 .pibbleInHat {
-    border-radius: 50%; 
-    width: 200px; 
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     margin-top: 10px;
     margin-bottom: 15px;
-
+    
+    }
 }
 
 /*Questions*/
@@ -186,7 +188,6 @@ footer {
     fieldset {
         width: 400px;
     } 
-   
     header .logo {
         width: 100px;
         height: 100px;
@@ -233,5 +234,10 @@ footer {
         font-size: 35px;
         letter-spacing: 2px;
         
+    }
+}
+@media screen and (min-width: 275px){
+    .pibbleInHat {
+        width: 200px;
     }
 }
