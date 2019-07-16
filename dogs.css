@@ -186,22 +186,10 @@ footer {
     fieldset {
         width: 400px;
     } 
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-content: center;
-        text-align: center;
-        height: 120px;
-        width: 90%;    
-        margin-top: 15px;
-    }
-    header h1 {
-        margin: 0px;
-    }
+   
     header .logo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         margin-top: 10px;
     }
     .introParagraph {
@@ -230,11 +218,6 @@ footer {
     fieldset {
         width: 700px;
     } 
-    header .logo {
-        width: 80px;
-        height: 80px;
-        margin: 0px;
-    }
     .introParagraph {
         width: 700px;
     }
