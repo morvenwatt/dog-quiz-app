@@ -78,6 +78,7 @@ legend{
     font-size: 25px;
     letter-spacing: 2px;
     text-align: center;
+    margin-top: 10px;
 }
 fieldset {
     border: none;
@@ -104,6 +105,12 @@ fieldset li label {
      margin-bottom: 15px;
      margin: auto;
      
+}
+fieldset ol {
+    padding: 0px;
+}
+input[type="submit"] {
+    margin: auto;
 }
 
 /*Answer/Feedback*/
