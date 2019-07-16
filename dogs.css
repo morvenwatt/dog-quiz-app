@@ -111,6 +111,7 @@ fieldset ol {
 }
 input[type="submit"] {
     margin: auto;
+    align-self: center;
 }
 
 /*Answer/Feedback*/
