@@ -66,14 +66,18 @@ p {
 
 /*Questions*/
 
-.questionPage, form {
+.questionPage {
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
  justify-content: space-between;
 }
-
+input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 legend{
     font-size: 25px;
     letter-spacing: 2px;
@@ -108,10 +112,6 @@ fieldset li label {
 }
 fieldset ol {
     padding: 0px;
-}
-input[type="submit"] {
-    margin: auto;
-    align-self: center;
 }
 
 /*Answer/Feedback*/
