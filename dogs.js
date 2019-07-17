@@ -271,12 +271,6 @@ const QUIZ = {
 function resetQuiz (){
     QUIZ.answers = [];
 }
-/*function alert (){
-    if (QUIZ.answers.checked()){
-        alert('Please select one answer')
-    } 
-}*/
-
 function getCurrentQuestionNumber() {
     return QUIZ.answers.length;
 }
