@@ -271,6 +271,11 @@ const QUIZ = {
 function resetQuiz (){
     QUIZ.answers = [];
 }
+/*function alert (){
+    if (QUIZ.answers.checked()){
+        alert('Please select one answer')
+    } 
+}*/
 
 function getCurrentQuestionNumber() {
     return QUIZ.answers.length;
@@ -319,7 +324,7 @@ function generateQuestion(question) {
               return `
               <li>
               <label for="answer${index}">
-                  <input type="radio" value="${index}" name="answer" id="answer${index}">${answer.text}</input>
+                  <input type="radio" value="${index}" name="answer" id="answer${index}">${answer.text} required</input>
               </label>
           </li>`
           }).join("\n")}
