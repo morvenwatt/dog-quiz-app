@@ -324,7 +324,7 @@ function generateQuestion(question) {
               return `
               <li>
               <label for="answer${index}">
-                  <input type="radio" value="${index}" name="answer" id="answer${index}">${answer.text} required</input>
+                  <input type="radio" value="${index}" name="answer" id="answer${index}" required="required">${answer.text}</input>
               </label>
           </li>`
           }).join("\n")}
