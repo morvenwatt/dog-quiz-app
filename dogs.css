@@ -2,7 +2,7 @@ body * {
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(cornsilk, maroon);
+    background: linear-gradient(cornsilk, red);
     font-family: Raleway;
     color: black;
 }
